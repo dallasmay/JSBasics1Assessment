@@ -4,21 +4,30 @@
 const faveColors = ['red', 'green', 'black']
 
 //CODE HERE
-
+let colorCopy = faveColors.slice(0, 4);
 //////////////////PROBLEM 2////////////////////
 /* Add a fourth color to the end of the 'colorCopy' array using the push method. */
 
 //CODE HERE
-
+colorCopy.push('purple');
 //////////////////PROBLEM 3////////////////////
 /*
   Using an array method, create a new array called 'middleNums' from the 
   numbers array that will capture only the middle numbers (2, 3, 4).
 */
 
-const numbers = [1, 2, 3, 4, 5]
+const numbers = [1, 2, 3, 4, 5];
 
 //CODE HERE
+
+// I wasn't sure if the instructions were telling us to remove the middle numbers from the numbers array and add them to middleNums or just to copy the middle numbers.
+// I decided to remove them, but here's the code if it was telling us to copy them
+
+// let middleNums = numbers.slice(1, 4);
+
+//or
+
+let middleNums = numbers.splice(1, 3);
 
 
 //////////////////PROBLEM 4////////////////////
@@ -35,3 +44,17 @@ const numbers = [1, 2, 3, 4, 5]
 */
 
 // CODE HERE
+let arr = [130, 100, 75, 8844];
+
+function bigOrSmall(arr) {
+  let answers = [];
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answers.push("big");
+    } else if (arr[i] <= 100) {
+      answers.push("small");
+    }
+  }
+  return answers;
+}
+console.log(bigOrSmall(arr));
