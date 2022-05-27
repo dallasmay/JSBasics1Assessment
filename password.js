@@ -7,7 +7,7 @@ const reader = readline.createInterface({
 
 
 
-reader.question("Welcome to the password validator tool! Please enter your password ", function(input){
+reader.question("Welcome to the password validator tool! \nPlease enter your password: \n ", function(input){
 	const password = input.split("");
     let trueFalse = false;
     if (password.length >= 10 && checkUpperCase() === true) {
