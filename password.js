@@ -8,7 +8,8 @@ const reader = readline.createInterface({
 
 
 reader.question("Welcome to the password validator tool! \nPlease enter your password: \n ", function(input){
-	const password = input.split("");
+	const whiteSpace = input.trim();
+    const password = whiteSpace.split("");
     let trueFalse = false;
     if (password.length >= 10 && checkUpperCase() === true) {
         console.log("Success! Your password is valid");
